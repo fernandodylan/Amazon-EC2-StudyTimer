@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Study Tracker</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script type="text/javascript" src="/javascript/script.js"></script>
+
+</head>
+<body>
+
+    <ul>
+        <li><a href="#news">Home Page</a></li>
+        <li><a class="active" href="/taskresults">View Tasks</a></li>
+        <li><a href="/timeresults">View Study Time</a></li>
+        <li><a href="/progression">Study Time Progression</a></li>
+    </ul>
+
+    <div class="subjects">
+        Enter your Tasks
+    </div>
+
+    <form action="/taskadd" method="post">
+        <input type="text" name="task"/>
+        <input type="submit"/>
+    </form>
+
+    <div class="subjectdelete">
+        Complete a Task
+    </div>
+
+    <form action="/taskdelete" method="post">
+        <input type="text" name="task"/>
+        <input type="submit"/>
+    </form>
+
+    <div class="container">
+        <div class="timertitle">
+            Record your Study Time
+        </div>
+
+        <div id="display">
+            00:00:00
+        </div>
+
+        <div class="buttons">
+            <button id="startStop" onclick="startStop()">Start</button> <button id="reset" onclick="reset()">Reset</button> 
+            <form action="" method="post">
+                    <input type="submit" name="trecord" value="Record" />
+            </form>
+            
+        </div>
+        <div class="timeinput">
+            <form action="/timelogs" method="post">
+                Time
+                <input type="text" name="time"/>
+                <input type="submit"/>
+            </form>
+        </div>
+       
+
+    </div>
+    
+
+   
+
+
+    <div class="email">
+        <div class=emailtext>
+            Send a reminder to your email
+        </div>
+        <form action="/email" method="post">
+            Your Email:<br>
+            <input type="text" name="to"><br>
+            Subject:<br>
+            <input type="text" name="subject">
+            Context:<br>
+            <input type="text" name="context"><br>
+            <input type="submit"/>
+          </form>
+    </div>
+
+    
+    
+</body>
+</html>
