@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const script = require('./script');
 const mysql = require('mysql')
-var plotly = require('plotly')("dylan.fernando", "bw3N6vFq1B16GBieHe9B");
+var plotly = require('plotly')("dylan.fernando", ");
 const nodemailer = require('nodemailer');
 
 const app = express();
