@@ -11,9 +11,9 @@ global.obj = [];
 
 //Set up database credentials
 const con = mysql.createConnection({
-    host: "database-1.c8hh58sn0vpu.us-east-1.rds.amazonaws.com",
-    user: "admin",
-    password: "helloworld",
+    host: "",
+    user: "",
+    password: "",
     database: "Assignment1"
 });
 
